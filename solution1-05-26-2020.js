@@ -27,6 +27,9 @@ var solution = function(isBadVersion) {
             direction = (isBad ^ wasBad) ? -1 : 1
             step = Math.floor(candidate / 2)
             candidate += (step * direction)
+	    if(step === 1) { 
+                break; 
+            }
         }
         return candidate
     };
